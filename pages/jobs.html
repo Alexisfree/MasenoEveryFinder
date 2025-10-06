@@ -11,8 +11,6 @@
 
   <!-- Simple reset + Google font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Leaflet CSS for map -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
   <style>
     :root{
       --primary: #007AFF;
@@ -29,6 +27,7 @@
          margin:0; 
          font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
          background:#667eea;
+         scroll-behavior:smooth;
          }
     .container{
         max-width:1080px; 
@@ -247,28 +246,6 @@
          border:1px solid rgba(255,255,255,0.5);
      }
 
-    /* map styles */
-    .map-container{
-        height:160px; 
-        border-radius:10px; 
-        overflow:hidden; 
-        position:relative
-    }
-    .map-placeholder{
-        height:160px; 
-        border-radius:10px; 
-        background:linear-gradient(135deg,#eef7ff,#ffffff);
-         display:flex; 
-         align-items:center; 
-         justify-content:center; 
-         color:var(--muted); 
-         font-weight:600
-        }
-    #deliveryMap{
-        height:100%; 
-        width:100%; 
-        border-radius:10px
-    }
 
     /* small responsive tweaks */
     .benefits{
@@ -416,11 +393,6 @@
               <button type="submit" class="btn" style="background:var(--primary); color:#fff; border:none">Apply via WhatsApp</button>
             </form>
 
-            <div style="height:12px"></div>
-            <div class="map-container">
-              <div id="deliveryMap"></div>
-            </div>
-            <div class="small muted" style="margin-top:8px; text-align:center">📍 Delivery zones around Maseno University</div>
 
             <div style="margin-top:12px">
               <div class="muted small">Need more details?</div>
@@ -451,70 +423,9 @@
 
   </main>
 
-  <!-- Leaflet JavaScript -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
   <script>
 
-    // Initialize the delivery map
-    document.addEventListener('DOMContentLoaded', function() {
-      // Maseno University coordinates (approximate)
-      const masenoUniversity = [-0.3667, 35.2833];
-      
-      // Initialize map
-      const map = L.map('deliveryMap').setView(masenoUniversity, 15);
-      
-      // Add OpenStreetMap tiles
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors',
-        maxZoom: 18
-      }).addTo(map);
-      
-      // Add delivery zones around Maseno University
-      const deliveryZones = [
-        {
-          name: "Main Campus",
-          coords: [-0.3667, 35.2833],
-          radius: 500,
-          color: "#007AFF"
-        },
-        {
-          name: "Hostel Area",
-          coords: [-0.3680, 35.2850],
-          radius: 300,
-          color: "#16a34a"
-        },
-        {
-          name: "Town Center",
-          coords: [-0.3600, 35.2800],
-          radius: 400,
-          color: "#f59e0b"
-        }
-      ];
-      
-      // Add markers and circles for delivery zones
-      deliveryZones.forEach(zone => {
-        // Add marker
-        L.marker(zone.coords)
-          .addTo(map)
-          .bindPopup(`<strong>${zone.name}</strong><br>Delivery Zone`)
-          .openPopup();
-        
-        // Add delivery zone circle
-        L.circle(zone.coords, {
-          color: zone.color,
-          fillColor: zone.color,
-          fillOpacity: 0.1,
-          radius: zone.radius
-        }).addTo(map);
-      });
-      
-      // Add a main marker for Maseno University
-      L.marker(masenoUniversity)
-        .addTo(map)
-        .bindPopup('<strong>Maseno University</strong><br>Main Campus')
-        .openPopup();
-    });
 
     // Small JS: confirm WhatsApp application and track clicks in console (replace with analytics).
     document.getElementById('apply-whatsapp').addEventListener('click', function(e){
