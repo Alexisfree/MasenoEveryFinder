@@ -1,145 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark-theme">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download - Maseno Every Finder</title>
     <meta name="description" content="Download Maseno Every Finder app and start exploring hostels and items for sale.">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../images/logo.png">
     <link rel="apple-touch-icon" href="../images/logo.png">
-    <meta name="theme-color" content="#4CAF50">
-    
-    <!-- Bootstrap CSS -->
+    <meta name="theme-color" content="#6366f1">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Bootstrap & Custom CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="../index.html">
                 <img src="../images/logo.png" alt="Maseno Every Finder Logo" height="40">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html#features">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="how-it-works.html">How It Works</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="features.html">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="faq.html">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="privacy.html">Privacy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="terms.html">Terms</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="download.html">Download</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="download.html">Download</a></li>
+                    <li class="nav-item"><a class="nav-link" href="terms.html">Terms</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Download Hero Section -->
-    <section class="download-hero py-5">
+    <!-- Download Hero -->
+    <section class="hero py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 animate-fade-in">
-                    <h1>Download Our App</h1>
-                    <p class="lead">Get the Maseno Every Finder app and start buying, selling, and finding hostels today!</p>
-                    <div class="alert alert-success mt-4" role="alert">
-                        <i class="fas fa-check-circle me-2"></i>
-                        <strong>Good news:</strong> The app is now available on the Play Store! Download it below.
+                    <h1 class="text-gradient">Download Our App</h1>
+                    <p class="lead text-muted">Get the Maseno Every Finder app and start buying, selling, and finding
+                        hostels today!</p>
+                    <div class="alert-custom d-flex align-items-center mt-4 mb-4" role="alert">
+                        <i class="fas fa-check-circle me-3 text-primary"></i>
+                        <div><strong>Good news:</strong> The app is now available on the Play Store!</div>
                     </div>
-                    <div class="download-buttons mt-4">
-                        <a href="https://play.google.com/store/apps/details?id=com.everyfinder.app" class="btn btn-primary btn-lg mb-3">
-                            <i class="fas fa-download me-2"></i>Download on Play Store
+                    <div class="d-flex gap-3">
+                        <a href="https://play.google.com/store/apps/details?id=com.everyfinder.app"
+                            class="btn btn-primary btn-lg">
+                            <i class="fab fa-google-play me-2"></i>Play Store
                         </a>
+                        <button class="btn btn-outline-primary btn-lg" disabled>
+                            <i class="fab fa-apple me-2"></i>App Store
+                        </button>
                     </div>
+                    <p class="small text-muted mt-2">* iOS version coming soon</p>
                 </div>
-                <div class="col-lg-6 animate-fade-in">
-                    <img src="../images/showcase.png" alt="App Preview" class="img-fluid">
+                <div class="col-lg-6 animate-fade-in text-center">
+                    <img src="../images/showcase.png" alt="App Preview" class="img-fluid hero-img"
+                        style="max-height: 500px;">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- App Features Section -->
-    <section class="app-features py-5">
+    <!-- App Features -->
+    <section class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">App Features</h2>
+            <div class="section-header text-center col-lg-8 mx-auto">
+                <h2>App Features</h2>
+                <p>Why you should download our app</p>
+            </div>
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <div class="feature-card text-center animate-fade-in">
-                        <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+                    <div class="feature-card h-100 text-center animate-fade-in">
+                        <div class="feature-icon-wrapper mx-auto">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
                         <h3>Easy to Use</h3>
-                        <p>Simple and intuitive interface designed for the best user experience.</p>
+                        <p class="text-muted">Simple and intuitive interface designed for the best user experience.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="feature-card text-center animate-fade-in">
-                        <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                    <div class="feature-card h-100 text-center animate-fade-in" style="transition-delay: 0.1s;">
+                        <div class="feature-icon-wrapper mx-auto">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
                         <h3>Secure</h3>
-                        <p>Your data and transactions are protected with advanced security measures.</p>
+                        <p class="text-muted">Your data and transactions are protected with advanced security measures.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="feature-card text-center animate-fade-in">
-                        <i class="fas fa-bolt fa-3x text-primary mb-3"></i>
+                    <div class="feature-card h-100 text-center animate-fade-in" style="transition-delay: 0.2s;">
+                        <div class="feature-icon-wrapper mx-auto">
+                            <i class="fas fa-bolt"></i>
+                        </div>
                         <h3>Fast & Reliable</h3>
-                        <p>Quick loading times and smooth performance for all features.</p>
+                        <p class="text-muted">Quick loading times and smooth performance for all features.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- System Requirements Section -->
-    <section class="system-requirements py-5 bg-light">
+    <!-- System Requirements -->
+    <section class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">System Requirements</h2>
+            <div class="section-header text-center col-lg-8 mx-auto">
+                <h2>System Requirements</h2>
+                <p>Make sure your device meets these requirements</p>
+            </div>
             <div class="row">
                 <div class="col-md-6 mb-4">
-                    <div class="requirements-card animate-fade-in">
-                        <h3><i class="fab fa-android me-2"></i>Android</h3>
-                        <ul>
-                            <li>Android 6.0 or higher</li>
-                            <li>2GB RAM minimum</li>
-                            <li>100MB free storage</li>
-                            <li>Internet connection</li>
+                    <div class="feature-card h-100 animate-fade-in">
+                        <h3 class="mb-4"><i class="fab fa-android text-primary me-2"></i>Android</h3>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-3 d-flex align-items-center"><i
+                                    class="fas fa-check text-primary me-3"></i>Android 6.0 or higher</li>
+                            <li class="mb-3 d-flex align-items-center"><i class="fas fa-check text-primary me-3"></i>2GB
+                                RAM minimum</li>
+                            <li class="mb-3 d-flex align-items-center"><i
+                                    class="fas fa-check text-primary me-3"></i>100MB free storage</li>
+                            <li class="mb-3 d-flex align-items-center"><i
+                                    class="fas fa-check text-primary me-3"></i>Internet connection</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
-                    <div class="requirements-card animate-fade-in">
-                        <h3><i class="fab fa-apple me-2"></i>iOS</h3>
-                        <ul>
-                            <li>iOS 13.0 or higher</li>
-                            <li>iPhone 6s or newer</li>
-                            <li>100MB free storage</li>
-                            <li>Internet connection</li>
+                    <div class="feature-card h-100 animate-fade-in" style="transition-delay: 0.1s;">
+                        <h3 class="mb-4"><i class="fab fa-apple text-muted me-2"></i>iOS (Coming Soon)</h3>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-3 d-flex align-items-center"><i class="fas fa-check text-muted me-3"></i>iOS
+                                13.0 or higher</li>
+                            <li class="mb-3 d-flex align-items-center"><i
+                                    class="fas fa-check text-muted me-3"></i>iPhone 6s or newer</li>
+                            <li class="mb-3 d-flex align-items-center"><i class="fas fa-check text-muted me-3"></i>100MB
+                                free storage</li>
+                            <li class="mb-3 d-flex align-items-center"><i
+                                    class="fas fa-check text-muted me-3"></i>Internet connection</li>
                         </ul>
                     </div>
                 </div>
@@ -147,39 +166,54 @@
         </div>
     </section>
 
-    <!-- Installation Guide Section -->
-    <section class="installation-guide py-5">
+    <!-- Installation Guide -->
+    <section class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Installation Guide</h2>
+            <div class="section-header text-center col-lg-8 mx-auto">
+                <h2>Installation Guide</h2>
+                <p>Follow these simple steps to get started</p>
+            </div>
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <div class="guide-steps">
-                        <div class="step animate-fade-in">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
+                    <div class="feature-card p-4">
+                        <div class="d-flex mb-4 animate-fade-in">
+                            <div class="flex-shrink-0">
+                                <span class="badge bg-primary rounded-circle p-3 fs-5">1</span>
+                            </div>
+                            <div class="flex-grow-1 ms-4">
                                 <h3>Download the App</h3>
-                                <p>Visit the Google Play Store or App Store and search for "Maseno Every Finder".</p>
+                                <p class="text-muted">Visit the Google Play Store and search for "Maseno Every Finder"
+                                    or use the download link above.</p>
                             </div>
                         </div>
-                        <div class="step animate-fade-in">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
+                        <div class="d-flex mb-4 animate-fade-in" style="transition-delay: 0.1s;">
+                            <div class="flex-shrink-0">
+                                <span class="badge bg-primary rounded-circle p-3 fs-5">2</span>
+                            </div>
+                            <div class="flex-grow-1 ms-4">
                                 <h3>Install the App</h3>
-                                <p>Tap the "Install" or "Get" button and wait for the download to complete.</p>
+                                <p class="text-muted">Tap the "Install" button and wait for the download and
+                                    installation to complete.</p>
                             </div>
                         </div>
-                        <div class="step animate-fade-in">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h3>Open the App</h3>
-                                <p>Launch the app and create your account using your student email.</p>
+                        <div class="d-flex mb-4 animate-fade-in" style="transition-delay: 0.2s;">
+                            <div class="flex-shrink-0">
+                                <span class="badge bg-primary rounded-circle p-3 fs-5">3</span>
+                            </div>
+                            <div class="flex-grow-1 ms-4">
+                                <h3>Open & Register</h3>
+                                <p class="text-muted">Launch the app and create your account using your student email
+                                    address.</p>
                             </div>
                         </div>
-                        <div class="step animate-fade-in">
-                            <div class="step-number">4</div>
-                            <div class="step-content">
-                                <h3>Verify Your Account</h3>
-                                <p>Complete the verification process to access all features.</p>
+                        <div class="d-flex animate-fade-in" style="transition-delay: 0.3s;">
+                            <div class="flex-shrink-0">
+                                <span class="badge bg-primary rounded-circle p-3 fs-5">4</span>
+                            </div>
+                            <div class="flex-grow-1 ms-4">
+                                <h3>Verify & Enjoy</h3>
+                                <p class="text-muted">Complete the verification process and start exploring all the
+                                    features Maseno Every Finder has to offer!</p>
                             </div>
                         </div>
                     </div>
@@ -189,13 +223,14 @@
     </section>
 
     <!-- Support Section -->
-    <section class="support-section py-5 bg-light">
+    <section class="py-5">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2>Need Help?</h2>
-                    <p class="lead mb-4">Our support team is here to help you with any questions or issues.</p>
-                    <a href="contact.html" class="btn btn-primary btn-lg">Contact Support</a>
+                <div class="col-lg-8 text-center animate-fade-in">
+                    <h2 class="mb-4">Need Help?</h2>
+                    <p class="lead text-muted mb-4">Our support team is here to help you with any questions or issues.
+                    </p>
+                    <a href="contact.html" class="btn btn-outline-primary btn-lg">Contact Support</a>
                 </div>
             </div>
         </div>
@@ -206,35 +241,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <h5>About Us</h5>
-                    <p>Maseno Every Finder is your trusted platform for buying, selling, and finding hostels in Maseno.</p>
+                    <h5 class="text-gradient">Maseno Every Finder</h5>
+                    <p class="text-muted">Your trusted platform for buying, selling, and finding hostels in Maseno.</p>
                 </div>
                 <div class="col-md-4 mb-4">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="../index.html#features" class="text-white">Features</a></li>
-                        <li><a href="how-it-works.html" class="text-white">How It Works</a></li>
-                        <li><a href="features.html" class="text-white">Features</a></li>
-                        <li><a href="blog.html" class="text-white">Blog</a></li>
-                        <li><a href="contact.html" class="text-white">Contact</a></li>
-                        <li><a href="faq.html" class="text-white">FAQ</a></li>
-                        <li><a href="privacy.html" class="text-white">Privacy</a></li>
-                        <li><a href="download.html" class="text-white">Download</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 mb-4">
                     <h5>Connect With Us</h5>
                     <div class="social-links">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
-            <hr class="bg-light">
-            <div class="text-center">
-                <p class="mb-0">&copy; 2025 Maseno Every Finder. All rights reserved.</p>
+            <hr style="border-color: rgba(255,255,255,0.1);">
+            <div class="text-center pt-3">
+                <p class="mb-0 text-muted">&copy; 2025 Maseno Every Finder. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -244,4 +275,5 @@
     <!-- Custom JS -->
     <script src="../js/script.js"></script>
 </body>
-</html> 
+
+</html>

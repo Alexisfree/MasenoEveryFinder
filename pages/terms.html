@@ -1,208 +1,219 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark-theme">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms and Conditions - Maseno Every Finder</title>
-    <meta name="description" content="Terms and Conditions for Maseno Every Finder - Please read these terms before using our platform.">
+    <meta name="description"
+        content="Terms and Conditions for Maseno Every Finder - Please read these terms before using our platform.">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../images/logo.png">
     <link rel="apple-touch-icon" href="../images/logo.png">
-    <meta name="theme-color" content="#4CAF50">
-    <!-- Bootstrap CSS -->
+    <meta name="theme-color" content="#6366f1">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Bootstrap & Custom CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="../index.html">
                 <img src="../images/logo.png" alt="Maseno Every Finder Logo" height="40">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html#features">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="how-it-works.html">How It Works</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="features.html">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="faq.html">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="privacy.html">Privacy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="download.html">Download</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="terms.html">Terms</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="download.html">Download</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="terms.html">Terms</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Terms Hero Section -->
-    <section class="terms-hero py-5">
+    <!-- Terms Hero -->
+    <section class="hero py-5">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12 text-center">
-                    <h1 class="display-4 mb-4">Terms and Conditions</h1>
-                    <p class="lead">Last updated: March 2025</p>
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-10 text-center animate-fade-in">
+                    <h1 class="text-gradient mb-4">Terms and Conditions</h1>
+                    <p class="lead text-muted">Last updated: March 2025</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- App Download Notice -->
-    <section class="py-4 bg-light">
+    <section class="py-4">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <div class="alert alert-success" role="alert">
-                        <i class="fas fa-check-circle me-2"></i>
-                        <strong>Good news:</strong> The app is now available on the Play Store! Download it below.
+                    <div class="alert-custom d-flex align-items-center justify-content-center" role="alert">
+                        <i class="fas fa-check-circle me-3 text-primary"></i>
+                        <div><strong>Good news:</strong> The app is now available on the Play Store!</div>
                     </div>
-                    <a href="https://play.google.com/store/apps/details?id=com.everyfinder.app" class="btn btn-primary btn-lg mt-3">
-                        <i class="fas fa-download me-2"></i>Download on Play Store
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Terms Content -->
-    <section class="terms-content py-5">
+    <section class="py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 mx-auto">
-                    <div class="terms-section mb-5">
-                        <h1 class="mb-4">🧾 MasenoEveryFinder – Terms and Conditions</h1>
-                        <p><strong>Effective Date:</strong> 28th March 2025</p>
-                    </div>
-                    <div class="terms-section mb-5">
-                        <h2>1. Acceptance of Terms</h2>
-                        <p>By accessing or using the MasenoEveryFinder app (the “Platform”), you agree to comply with and be bound by these Terms and Conditions (“Terms”). If you do not agree, please do not use the Platform.</p>
-                    </div>
-                    <div class="terms-section mb-5">
-                        <h2>2. Eligibility</h2>
-                        <p>You must be at least 18 years old or have legal consent from a guardian to use this Platform. By using the Platform, you confirm that you meet this requirement.</p>
-                    </div>
-                    <div class="terms-section mb-5">
-                        <h2>3. User Accounts</h2>
-                        <ul>
-                            <li>Users must register and create an account to post listings, shops, or services.</li>
-                            <li>You are responsible for keeping your login credentials confidential.</li>
-                            <li>You agree to provide accurate, truthful information and update it as needed.</li>
-                        </ul>
-                    </div>
-                    <div class="terms-section mb-5">
-                        <h2>4. User-Generated Content</h2>
-                        <p>Users can post:</p>
-                        <ul>
-                            <li>Shops and product listings</li>
-                            <li>Service advertisements</li>
-                            <li>Secondhand items</li>
-                            <li>Posters and general announcements</li>
-                            <li>(Soon) Hostel listings</li>
-                        </ul>
-                        <p>You are solely responsible for the content you post. You agree not to post:</p>
-                        <ul>
-                            <li>Illegal items or services</li>
-                            <li>Misleading or fraudulent content</li>
-                            <li>Offensive, abusive, or pornographic materials</li>
-                            <li>Spam or repetitive postings</li>
-                        </ul>
-                        <p>MasenoEveryFinder reserves the right to remove content that violates these Terms.</p>
-                    </div>
-                    <div class="terms-section mb-5">
-                        <h2>5. Prohibited Activities</h2>
-                        <ul>
-                            <li>Use the Platform for unlawful purposes</li>
-                            <li>Post false, harmful, or defamatory content</li>
-                            <li>Impersonate another person or entity</li>
-                            <li>Interfere with Platform security or operations</li>
-                            <li>Attempt to scrape or hack the Platform</li>
-                        </ul>
-                    </div>
-                    <div class="terms-section mb-5">
-                        <h2>6. Payments and Transactions</h2>
-                        <ul>
-                            <li>MasenoEveryFinder does not handle direct payments between buyers and sellers.</li>
-                            <li>All transactions are conducted at your own risk.</li>
-                            <li>Users are encouraged to verify legitimacy before making any payments.</li>
-                            <li>We are not liable for any loss or fraud arising from off-platform transactions.</li>
-                        </ul>
-                    </div>
-                    <div class="terms-section mb-5">
-                        <h2>7. Third-Party Links</h2>
-                        <p>The Platform may contain links to external sites or contacts. MasenoEveryFinder is not responsible for the content, privacy, or reliability of these third-party services.</p>
-                    </div>
-                    <div class="terms-section mb-5">
-                        <h2>8. Account Suspension and Termination</h2>
-                        <p>We reserve the right to suspend or permanently ban any account that:</p>
-                        <ul>
-                            <li>Violates our terms</li>
-                            <li>Posts prohibited content</li>
-                            <li>Is suspected of fraud, spam, or abuse</li>
-                        </ul>
-                    </div>
-                    <div class="terms-section mb-5">
-                        <h2>9. Intellectual Property</h2>
-                        <ul>
-                            <li>All content, branding, UI design, and code belong to MasenoEveryFinder unless otherwise stated.</li>
-                            <li>Users retain rights to the content they post but grant the Platform a license to display it publicly.</li>
-                        </ul>
-                    </div>
-                    <div class="terms-section mb-5">
-                        <h2>10. Privacy</h2>
-                        <p>We respect your privacy. Our Privacy Policy outlines how your data is collected, used, and protected.</p>
-                    </div>
-                    <div class="terms-section mb-5">
-                        <h2>11. Limitation of Liability</h2>
-                        <ul>
-                            <li>MasenoEveryFinder is not responsible for:</li>
-                            <ul>
-                                <li>Disputes between users</li>
-                                <li>Items not delivered or as described</li>
-                                <li>Financial losses or damages resulting from use of the app</li>
+                    <div class="feature-card p-5 animate-fade-in">
+                        <div class="mb-5 last-child-no-margin">
+                            <h1 class="h3 mb-4 text-primary">🧾 MasenoEveryFinder – Terms and Conditions</h1>
+                            <p class="text-muted"><strong>Effective Date:</strong> 28th March 2025</p>
+                        </div>
+                        <div class="mb-5 last-child-no-margin">
+                            <h2 class="h3 mb-4 text-primary">1. Acceptance of Terms</h2>
+                            <p class="text-muted">By accessing or using the MasenoEveryFinder app (the “Platform”), you
+                                agree to comply with and be bound by these Terms and Conditions (“Terms”). If you do not
+                                agree, please do not use the Platform.</p>
+                        </div>
+                        <div class="mb-5 last-child-no-margin">
+                            <h2 class="h3 mb-4 text-primary">2. Eligibility</h2>
+                            <p class="text-muted">You must be at least 18 years old or have legal consent from a
+                                guardian to use this Platform. By using the Platform, you confirm that you meet this
+                                requirement.</p>
+                        </div>
+                        <div class="mb-5 last-child-no-margin">
+                            <h2 class="h3 mb-4 text-primary">3. User Accounts</h2>
+                            <ul class="text-muted">
+                                <li class="mb-2">Users must register and create an account to post listings, shops, or
+                                    services.</li>
+                                <li class="mb-2">You are responsible for keeping your login credentials confidential.
+                                </li>
+                                <li class="mb-2">You agree to provide accurate, truthful information and update it as
+                                    needed.</li>
                             </ul>
-                        </ul>
-                        <p>Use the Platform at your own discretion and risk.</p>
-                    </div>
-                    <div class="terms-section mb-5">
-                        <h2>12. Modifications</h2>
-                        <p>MasenoEveryFinder may update these Terms from time to time. Continued use of the Platform after changes implies your acceptance.</p>
-                    </div>
-                    <div class="terms-section mb-5">
-                        <h2>13. Governing Law</h2>
-                        <p>These Terms are governed by the laws of Kenya. Any disputes shall be handled within Kenyan legal jurisdiction.</p>
-                    </div>
-                    <div class="terms-section mb-5">
-                        <h2>14. Contact Information</h2>
-                        <p>For support or questions, contact us via:</p>
-                        <ul>
-                            <li>📧 masenoeveryfinder@gmail.com</li>
-                            <li>📱 +254 756 535 693</li>
-                        </ul>
+                        </div>
+                        <div class="mb-5 last-child-no-margin">
+                            <h2 class="h3 mb-4 text-primary">4. User-Generated Content</h2>
+                            <p class="text-muted mb-3">Users can post:</p>
+                            <ul class="text-muted mb-3">
+                                <li class="mb-2">Shops and product listings</li>
+                                <li class="mb-2">Service advertisements</li>
+                                <li class="mb-2">Secondhand items</li>
+                                <li class="mb-2">Posters and general announcements</li>
+                                <li class="mb-2">(Soon) Hostel listings</li>
+                            </ul>
+                            <p class="text-muted mb-3">You are solely responsible for the content you post. You agree
+                                not to post:</p>
+                            <ul class="text-muted mb-3">
+                                <li class="mb-2">Illegal items or services</li>
+                                <li class="mb-2">Misleading or fraudulent content</li>
+                                <li class="mb-2">Offensive, abusive, or pornographic materials</li>
+                                <li class="mb-2">Spam or repetitive postings</li>
+                            </ul>
+                            <p class="text-muted">MasenoEveryFinder reserves the right to remove content that violates
+                                these Terms.</p>
+                        </div>
+                        <div class="mb-5 last-child-no-margin">
+                            <h2 class="h3 mb-4 text-primary">5. Prohibited Activities</h2>
+                            <ul class="text-muted">
+                                <li class="mb-2">Use the Platform for unlawful purposes</li>
+                                <li class="mb-2">Post false, harmful, or defamatory content</li>
+                                <li class="mb-2">Impersonate another person or entity</li>
+                                <li class="mb-2">Interfere with Platform security or operations</li>
+                                <li class="mb-2">Attempt to scrape or hack the Platform</li>
+                            </ul>
+                        </div>
+                        <div class="mb-5 last-child-no-margin">
+                            <h2 class="h3 mb-4 text-primary">6. Payments and Transactions</h2>
+                            <ul class="text-muted">
+                                <li class="mb-2">MasenoEveryFinder does not handle direct payments between buyers and
+                                    sellers.</li>
+                                <li class="mb-2">All transactions are conducted at your own risk.</li>
+                                <li class="mb-2">Users are encouraged to verify legitimacy before making any payments.
+                                </li>
+                                <li class="mb-2">We are not liable for any loss or fraud arising from off-platform
+                                    transactions.</li>
+                            </ul>
+                        </div>
+                        <div class="mb-5 last-child-no-margin">
+                            <h2 class="h3 mb-4 text-primary">7. Third-Party Links</h2>
+                            <p class="text-muted">The Platform may contain links to external sites or contacts.
+                                MasenoEveryFinder is not responsible for the content, privacy, or reliability of these
+                                third-party services.</p>
+                        </div>
+                        <div class="mb-5 last-child-no-margin">
+                            <h2 class="h3 mb-4 text-primary">8. Account Suspension and Termination</h2>
+                            <p class="text-muted mb-3">We reserve the right to suspend or permanently ban any account
+                                that:</p>
+                            <ul class="text-muted">
+                                <li class="mb-2">Violates our terms</li>
+                                <li class="mb-2">Posts prohibited content</li>
+                                <li class="mb-2">Is suspected of fraud, spam, or abuse</li>
+                            </ul>
+                        </div>
+                        <div class="mb-5 last-child-no-margin">
+                            <h2 class="h3 mb-4 text-primary">9. Intellectual Property</h2>
+                            <ul class="text-muted">
+                                <li class="mb-2">All content, branding, UI design, and code belong to MasenoEveryFinder
+                                    unless otherwise stated.</li>
+                                <li class="mb-2">Users retain rights to the content they post but grant the Platform a
+                                    license to display it publicly.</li>
+                            </ul>
+                        </div>
+                        <div class="mb-5 last-child-no-margin">
+                            <h2 class="h3 mb-4 text-primary">10. Privacy</h2>
+                            <p class="text-muted">We respect your privacy. Our Privacy Policy outlines how your data is
+                                collected, used, and protected.</p>
+                        </div>
+                        <div class="mb-5 last-child-no-margin">
+                            <h2 class="h3 mb-4 text-primary">11. Limitation of Liability</h2>
+                            <p class="text-muted mb-3">MasenoEveryFinder is not responsible for:</p>
+                            <ul class="text-muted mb-3">
+                                <li class="mb-2">Disputes between users</li>
+                                <li class="mb-2">Items not delivered or as described</li>
+                                <li class="mb-2">Financial losses or damages resulting from use of the app</li>
+                            </ul>
+                            <p class="text-muted">Use the Platform at your own discretion and risk.</p>
+                        </div>
+                        <div class="mb-5 last-child-no-margin">
+                            <h2 class="h3 mb-4 text-primary">12. Modifications</h2>
+                            <p class="text-muted">MasenoEveryFinder may update these Terms from time to time. Continued
+                                use of the Platform after changes implies your acceptance.</p>
+                        </div>
+                        <div class="mb-5 last-child-no-margin">
+                            <h2 class="h3 mb-4 text-primary">13. Governing Law</h2>
+                            <p class="text-muted">These Terms are governed by the laws of Kenya. Any disputes shall be
+                                handled within Kenyan legal jurisdiction.</p>
+                        </div>
+                        <div class="last-child-no-margin">
+                            <h2 class="h3 mb-4 text-primary">14. Contact Information</h2>
+                            <p class="text-muted mb-3">For support or questions, contact us via:</p>
+                            <ul class="list-unstyled text-muted">
+                                <li class="mb-2"><i
+                                        class="fas fa-envelope me-2 text-primary"></i>masenoeveryfinder@gmail.com</li>
+                                <li class="mb-2"><i class="fas fa-phone me-2 text-primary"></i>+254 756 535 693</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -214,36 +225,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <h5>About Us</h5>
-                    <p>Maseno Every Finder is your trusted platform for buying, selling, and finding hostels in Maseno.</p>
+                    <h5 class="text-gradient">Maseno Every Finder</h5>
+                    <p class="text-muted">Your trusted platform for buying, selling, and finding hostels in Maseno.</p>
                 </div>
                 <div class="col-md-4 mb-4">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="../index.html#features" class="text-white">Features</a></li>
-                        <li><a href="how-it-works.html" class="text-white">How It Works</a></li>
-                        <li><a href="features.html" class="text-white">Features</a></li>
-                        <li><a href="blog.html" class="text-white">Blog</a></li>
-                        <li><a href="contact.html" class="text-white">Contact</a></li>
-                        <li><a href="faq.html" class="text-white">FAQ</a></li>
-                        <li><a href="privacy.html" class="text-white">Privacy</a></li>
-                        <li><a href="download.html" class="text-white">Download</a></li>
-                        <li><a href="terms.html" class="text-white">Terms</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 mb-4">
                     <h5>Connect With Us</h5>
                     <div class="social-links">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
-            <hr class="bg-light">
-            <div class="text-center">
-                <p class="mb-0">&copy; 2025 Maseno Every Finder. All rights reserved.</p>
+            <hr style="border-color: rgba(255,255,255,0.1);">
+            <div class="text-center pt-3">
+                <p class="mb-0 text-muted">&copy; 2025 Maseno Every Finder. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -253,4 +259,5 @@
     <!-- Custom JS -->
     <script src="../js/script.js"></script>
 </body>
-</html> 
+
+</html>
